@@ -29,9 +29,28 @@ console.log(smartUtils.tagrize(wordTwo));
 console.log(smartUtils.tagrize(wordThre));
 console.log(smartUtils.tagrize(wordFour));
 ```  
+---  
+  
+### EnsureDirectoryExists  
+
+Ensure the directory exists
+
+```javascript
+var smartUtils = require('smart-utils');
+
+function ensureDirectoryExists_callback() {
+    console.log('Houston, We\'ve Had a Problem');
+};
+
+smartUtils.ensureDirectoryExists('C:/temp', ensureDirectoryExists_callback);
+
+console.log('All ok.');
+
+```  
 ---
 
 ### News  
-0.0.1 Created the project, added tagrize function.  
+- 0.0.1 Created the project, added *tagrize* function.  
+- 0.0.2 Added *ensureDirectoryExists* function.  
   
 Thanks  

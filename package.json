@@ -1,0 +1,30 @@
+{
+  "name": "smart-utils",
+  "version": "0.0.2",
+  "description": "Collection of util things",
+  "main": "smartUtils.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulioGold/smart-utils.git"
+  },
+  "keywords": [
+    "tools",
+    "tool",
+    "utils",
+    "tagrize",
+    "util",
+    "smart"
+  ],
+  "author": "JulioGold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JulioGold/smart-utils/issues"
+  },
+  "homepage": "https://github.com/JulioGold/smart-utils#readme"
+}

@@ -1,5 +1,6 @@
 var smartUtils = {
-    tagrize:Tagrize
+    tagrize: Tagrize,
+    ensureDirectoryExists: EnsureDirectoryExists
 };
 
 module.exports = smartUtils;
@@ -26,4 +27,22 @@ function Tagrize(word) {
 
         return wordTemp.join('');
     }
+};
+
+function EnsureDirectoryExists(directoryPath, callback) {
+    
+    var fs = require("fs");
+    
+    fs.mkdir(directoryPath, function(err) {
+        if (err) {
+            /* Se o erro é que a pasta já existe, então ignora */
+            if (err.code == 'EEXIST') {
+                return;
+            } else {
+                callback(err); /* Algo de errado não está certo */
+            }
+        } else {
+            callback(null); /* Tudo ok na criação do diretório */
+        }
+    });
 };
