@@ -37,7 +37,7 @@ function EnsureDirectoryExists(directoryPath, callback) {
         if (err) {
             /* Se o erro é que a pasta já existe, então ignora */
             if (err.code == 'EEXIST') {
-                return;
+                callback(null);
             } else {
                 callback(err); /* Algo de errado não está certo */
             }
