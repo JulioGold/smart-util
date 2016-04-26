@@ -53,6 +53,7 @@ console.log('All ok.');
 
 ### News  
 - 0.0.1 Created the project, added *tagrize* function.  
-- 0.0.2 Added *ensureDirectoryExists* function.  
+- 0.0.2 Added *ensureDirectoryExists* function.
+- 0.0.3 Fix callback function of *ensureDirectoryExists* and added release to update npm package.  
   
 Thanks  
