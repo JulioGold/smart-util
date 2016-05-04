@@ -1,6 +1,7 @@
 var smartUtils = {
     tagrize: Tagrize,
-    ensureDirectoryExists: EnsureDirectoryExists
+    ensureDirectoryExists: EnsureDirectoryExists,
+    listDirectoryContentRecursive: ListDirectoryContentRecursive
 };
 
 module.exports = smartUtils;
@@ -44,5 +45,52 @@ function EnsureDirectoryExists(directoryPath, callback) {
         } else {
             callback(null); /* Tudo ok na criação do diretório */
         }
+    });
+};
+
+// List all files and directories inside a directory recursive, that is asynchronous
+function ListDirectoryContentRecursive(directoryPath, callback) {
+
+    var fs = fs || require('fs');
+    var path = path || require('path');
+    var results = [];
+
+    fs.readdir(directoryPath, function(err, list) {
+
+        if (err) {
+            return callback(err);
+        }
+
+        var pending = list.length;
+
+        if (!pending) {
+            return callback(null, results);
+        }
+
+        list.forEach(function(file) {
+
+            file = path.join(directoryPath, file);
+
+            results.push(file);
+
+            fs.stat(file, function(err, stat) {
+
+                if (stat && stat.isDirectory()) {
+
+                    ListDirectoryContentRecursive(file, function(err, res) {
+
+                        results = results.concat(res);
+                        
+                        if (!--pending) {
+                            callback(null, results);
+                        }
+                    });
+                } else {
+                    if (!--pending) {
+                        callback(null, results);
+                    }
+                }
+            });
+        });
     });
 };

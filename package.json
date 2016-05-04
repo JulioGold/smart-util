@@ -1,6 +1,6 @@
 {
   "name": "smart-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Collection of util things",
   "main": "smartUtils.js",
   "directories": {
@@ -19,7 +19,16 @@
     "utils",
     "tagrize",
     "util",
-    "smart"
+    "smart",
+    "ensureDirectoryExists",
+    "ensure directory exist",
+    "ensure folder exist",
+    "ensure",
+    "folder",
+    "directory",
+    "listDirectoryContentRecursive",
+    "list",
+    "recursive"
   ],
   "author": "JulioGold",
   "license": "MIT",
