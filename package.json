@@ -1,6 +1,6 @@
 {
   "name": "smart-utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Collection of util things",
   "main": "smartUtils.js",
   "directories": {
@@ -28,7 +28,11 @@
     "directory",
     "listDirectoryContentRecursive",
     "list",
-    "recursive"
+    "recursive",
+    "object deep find",
+    "object",
+    "deep",
+    "find"
   ],
   "author": "JulioGold",
   "license": "MIT",
