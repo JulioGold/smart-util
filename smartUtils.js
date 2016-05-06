@@ -1,7 +1,8 @@
 var smartUtils = {
     tagrize: Tagrize,
     ensureDirectoryExists: EnsureDirectoryExists,
-    listDirectoryContentRecursive: ListDirectoryContentRecursive
+    listDirectoryContentRecursive: ListDirectoryContentRecursive,
+    objectDeepFind: ObjectDeepFind
 };
 
 module.exports = smartUtils;
@@ -93,4 +94,26 @@ function ListDirectoryContentRecursive(directoryPath, callback) {
             });
         });
     });
+};
+
+// Get the value of an property deep into in a object, or not.  
+// Do not ask me the utility of it ;D
+function ObjectDeepFind(obj, propertyPath) {
+	
+    // Divide todas as propriedades pelo .
+	var paths = propertyPath.split('.');
+	
+    // Copia o objeto
+	var currentObj = obj;
+
+    // Para cada propriedade vou pegar a próxima até encontrar o valor do path inteiro da propriedade
+	for (var i = 0; i < paths.length; ++i) {
+		if (currentObj[paths[i]] == undefined) {
+			return undefined;
+		} else {
+			currentObj = currentObj[paths[i]];
+		}
+	}
+	
+	return currentObj;
 };

@@ -142,12 +142,42 @@ smartUtils.listDirectoryContentRecursive('C:/temp/', listDirectoryContentRecursi
 
 ```  
 
----
+---  
+
+### ObjectDeepFind  
+
+Get the value of an property deep into in a object, or not.  
+Do not ask me the utility of it ;D   
+  
+```javascript
+var smartUtils = require('smart-utils');
+
+var dataObject = {
+    one: {
+        two: {
+            three: {
+                value: "This is the final value!"
+            },
+            value: "This is not the final value! Go ahead!"
+        },
+        value: "This is the second level value."
+    },
+    value: "Yeap, first level value."
+};
+
+console.log(smartUtils.objectDeepFind(dataObject, 'value'));
+console.log(smartUtils.objectDeepFind(dataObject, 'one.value'));
+console.log(smartUtils.objectDeepFind(dataObject, 'one.two.value'));
+console.log(smartUtils.objectDeepFind(dataObject, 'one.two.three.value'));
+
+---  
+  
 
 ### News  
 - 0.0.1 Created the project, added *tagrize* function.  
 - 0.0.2 Added *ensureDirectoryExists* function.
 - 0.0.3 Fix callback function of *ensureDirectoryExists* and added release to update npm package.
 - 0.0.4 Added *listDirectoryContentRecursive* function.  
+- 0.0.5 Added *objectDeepFind* function.  
   
 Thanks  
