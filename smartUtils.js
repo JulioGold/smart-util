@@ -2,7 +2,8 @@ var smartUtils = {
     tagrize: Tagrize,
     ensureDirectoryExists: EnsureDirectoryExists,
     listDirectoryContentRecursive: ListDirectoryContentRecursive,
-    objectDeepFind: ObjectDeepFind
+    objectDeepFind: ObjectDeepFind,
+    replaceAll: ReplaceAll
 };
 
 module.exports = smartUtils;
@@ -116,4 +117,15 @@ function ObjectDeepFind(obj, propertyPath) {
 	}
 	
 	return currentObj;
+};
+
+function ReplaceAll(text, search, replace) {
+
+    var newText = text;
+
+    while (newText.indexOf(search) > -1) {
+        newText = newText.replace(search, replace);
+    }
+
+    return newText;
 };

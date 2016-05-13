@@ -1,43 +1,46 @@
 {
-  "name": "smart-utils",
-  "version": "0.0.5",
-  "description": "Collection of util things",
-  "main": "smartUtils.js",
-  "directories": {
-    "example": "example"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JulioGold/smart-utils.git"
-  },
-  "keywords": [
-    "tools",
-    "tool",
-    "utils",
-    "tagrize",
-    "util",
-    "smart",
-    "ensureDirectoryExists",
-    "ensure directory exist",
-    "ensure folder exist",
-    "ensure",
-    "folder",
-    "directory",
-    "listDirectoryContentRecursive",
-    "list",
-    "recursive",
-    "object deep find",
-    "object",
-    "deep",
-    "find"
-  ],
-  "author": "JulioGold",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JulioGold/smart-utils/issues"
-  },
-  "homepage": "https://github.com/JulioGold/smart-utils#readme"
+    "name": "smart-utils",
+    "version": "0.0.6",
+    "description": "Collection of util things",
+    "main": "smartUtils.js",
+    "directories": {
+        "example": "example"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JulioGold/smart-utils.git"
+    },
+    "keywords": [
+        "tools",
+        "tool",
+        "utils",
+        "tagrize",
+        "util",
+        "smart",
+        "ensureDirectoryExists",
+        "ensure directory exist",
+        "ensure folder exist",
+        "ensure",
+        "folder",
+        "directory",
+        "listDirectoryContentRecursive",
+        "list",
+        "recursive",
+        "object deep find",
+        "object",
+        "deep",
+        "find",
+        "replace",
+        "replaceall",
+        "replace all"
+    ],
+    "author": "JulioGold",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/JulioGold/smart-utils/issues"
+    },
+    "homepage": "https://github.com/JulioGold/smart-utils#readme"
 }

@@ -170,14 +170,33 @@ console.log(smartUtils.objectDeepFind(dataObject, 'one.value'));
 console.log(smartUtils.objectDeepFind(dataObject, 'one.two.value'));
 console.log(smartUtils.objectDeepFind(dataObject, 'one.two.three.value'));
 
----  
+```  
   
+---  
+### ReplaceAll  
+  
+Replace all found values at once, without regex ;D.   
+  
+```javascript
+var smartUtils = require('smart-utils');
 
+var text = "object is a color, but object is a fruit to.";
+
+console.log(smartUtils.replaceAll(text, "object", "orange"));
+  
+```  
+  
+---    
+  
+  
 ### News  
+    
 - 0.0.1 Created the project, added *tagrize* function.  
 - 0.0.2 Added *ensureDirectoryExists* function.
 - 0.0.3 Fix callback function of *ensureDirectoryExists* and added release to update npm package.
 - 0.0.4 Added *listDirectoryContentRecursive* function.  
 - 0.0.5 Added *objectDeepFind* function.  
+- 0.0.6 Added *replaceAll* function.  
   
 Thanks  
+  
