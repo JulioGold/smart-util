@@ -142,6 +142,41 @@ smartUtils.listDirectoryContentRecursive('C:/temp/', listDirectoryContentRecursi
 
 ```  
 
+### ListDirectoryContent  
+  
+List directory and files inside an directory with options or no to list recursively  
+  
+```javascript
+var smartUtils = require('smart-utils');
+
+function listDirectoryContent_callback(error, result) {
+    
+    if(error){
+        console.log('Ooops, problems!');
+        console.log(error);
+        return;
+    }
+
+    for (var index = 0; index < result.length; index++) {
+        var element = result[index];
+        console.log(element);
+    }
+    
+    console.log('----------------------------------------');
+};
+
+var options = {
+    recursive: true
+};
+
+// With options to recursive
+smartUtils.listDirectoryContent('C:/temp', options, listDirectoryContent_callback);
+
+// Without options, list just que first directory level  
+smartUtils.listDirectoryContent('C:/temp', listDirectoryContent_callback);
+
+```  
+
 ---  
 
 ### ObjectDeepFind  
@@ -197,6 +232,7 @@ console.log(smartUtils.replaceAll(text, "object", "orange"));
 - 0.0.4 Added *listDirectoryContentRecursive* function.  
 - 0.0.5 Added *objectDeepFind* function.  
 - 0.0.6 Added *replaceAll* function.  
+- 0.0.7 Added *listDirectoryContent* function.  
   
 Thanks  
   

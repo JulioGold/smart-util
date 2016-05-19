@@ -1,6 +1,6 @@
 {
     "name": "smart-utils",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Collection of util things",
     "main": "smartUtils.js",
     "directories": {
@@ -25,9 +25,14 @@
         "ensure folder exist",
         "ensure",
         "folder",
+        "sub",
+        "subfolder",
+        "sub folder",
         "directory",
         "listDirectoryContentRecursive",
         "list",
+        "listDirectoryContent",
+        "content",
         "recursive",
         "object deep find",
         "object",

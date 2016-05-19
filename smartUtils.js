@@ -2,6 +2,7 @@ var smartUtils = {
     tagrize: Tagrize,
     ensureDirectoryExists: EnsureDirectoryExists,
     listDirectoryContentRecursive: ListDirectoryContentRecursive,
+    listDirectoryContent: ListDirectoryContent,
     objectDeepFind: ObjectDeepFind,
     replaceAll: ReplaceAll
 };
@@ -88,6 +89,73 @@ function ListDirectoryContentRecursive(directoryPath, callback) {
                         }
                     });
                 } else {
+                    if (!--pending) {
+                        callback(null, results);
+                    }
+                }
+            });
+        });
+    });
+};
+
+function ListDirectoryContent(directoryPath,  options, callback) {
+ 
+    /* Estrutura atual do objeto options
+        options.recursive = Indica se deve procurar nas subpastas também.
+    */
+    
+    // Se options é uma função e callback não foi setada, quer dizer que não enviou o parâmetro options
+    if (typeof options === 'function' && !callback) {
+        callback = options
+        options = {}
+    }
+    // Isso não é utilizado aqui, mas servia para verificar se options era uma expressão regular
+    // } else if (typeof options === 'function' || options instanceof RegExp) {
+    //     options = {filter: options}
+    // }
+    
+    callback = callback || function () {};
+    options = options || {};
+
+    //////////////////////////////////////////////////////////
+
+    var fs = fs || require('fs');
+    var path = path || require('path');
+    var results = [];
+
+    fs.readdir(directoryPath, function(err, list) {
+
+        if (err) {
+            return callback(err);
+        }
+
+        var pending = list.length;
+
+        if (!pending) {
+            return callback(null, results);
+        }
+
+        list.forEach(function(fileOrDirectory) {
+
+            fileOrDirectory = path.join(directoryPath, fileOrDirectory);
+
+            results.push(fileOrDirectory);
+
+            fs.stat(fileOrDirectory, function(err, stat) {
+
+                // Se é um diretório e foi enviada a opção dizendo que é recursivo, então vou ler este diretório também
+                if (options.recursive && stat && stat.isDirectory()) {
+
+                    ListDirectoryContent(fileOrDirectory, options, function(err, res) {
+
+                        results = results.concat(res);
+                        
+                        if (!--pending) {
+                            callback(null, results);
+                        }
+                    });
+                } else {
+                    // Se não era para ser recursivo
                     if (!--pending) {
                         callback(null, results);
                     }
