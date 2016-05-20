@@ -7,6 +7,22 @@ Collection of util things
 npm install smart-utils
 ```
   
+  
+Methods
+  
+-------
+  
+- [Tagrize](#Tagrize)
+- [EnsureDirectoryExists](#EnsureDirectoryExists)
+- [Now EnsureDirectoryExists with promise](#Now EnsureDirectoryExists with promise)
+- [With promise but Q lib](#With promise but Q lib)
+- [With promise multi nivel path](#With promise multi nivel path)
+- [ListDirectoryContentRecursive](#ListDirectoryContentRecursive)
+- [ListDirectoryContent](#ListDirectoryContent)
+- [With promise Q lib](#With promise Q lib)
+- [ObjectDeepFind](#ObjectDeepFind)
+- [ReplaceAll](#ReplaceAll)
+  
 ---  
 ### Tagrize  
 
