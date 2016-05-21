@@ -12,16 +12,16 @@ Methods
   
 -------
   
-- [Tagrize](#Tagrize)
-- [EnsureDirectoryExists](#EnsureDirectoryExists)
-- [Now EnsureDirectoryExists with promise](#Now-EnsureDirectoryExists-with-promise)
-- [With promise but Q lib](#With-promise-but-Q-lib)
-- [With promise multi nivel path](#With-promise-multi-nivel-path)
-- [ListDirectoryContentRecursive](#ListDirectoryContentRecursive)
-- [ListDirectoryContent](#ListDirectoryContent)
-- [With promise Q lib](#With-promise-Q-lib)
-- [ObjectDeepFind](#ObjectDeepFind)
-- [ReplaceAll](#ReplaceAll)
+- [Tagrize](#tagrize)
+- [EnsureDirectoryExists](#ensuredirectoryexists)
+- [Now EnsureDirectoryExists with promise](#now-ensuredirectoryexists-with-promise)
+- [With promise but Q lib](#with-promise-but-q-lib)
+- [With promise multi nivel path](#with-promise-multi-nivel-path)
+- [ListDirectoryContentRecursive](#listdirectorycontentrecursive)
+- [ListDirectoryContent](#listdirectorycontent)
+- [With promise Q lib](#with-promise-q-lib)
+- [ObjectDeepFind](#objectdeepfind)
+- [ReplaceAll](#replaceall)
   
 ---  
 ### Tagrize  
