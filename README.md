@@ -298,5 +298,5 @@ console.log(smartUtils.replaceAll(text, "object", "orange"));
 - 0.0.6 Added *replaceAll* function.  
 - 0.0.7 Added *listDirectoryContent* function.  
   
-Thanks  
+Danke  
   
