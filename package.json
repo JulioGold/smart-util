@@ -40,7 +40,8 @@
         "find",
         "replace",
         "replaceall",
-        "replace all"
+        "replace all",
+        "promise"
     ],
     "author": "JulioGold",
     "license": "MIT",
